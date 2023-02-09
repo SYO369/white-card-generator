@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>White Card Generator | by YoRoShiKu</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+        <h2>White Card Generator</h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="text-label">
+                    <label class="title">Name</label>
+                    <input class="info" type="text" id="name" onkeyup="drawWhiteCard()">
+                </div>
+                <div class="filter">
+                    <label class="title">Sex</label>
+                    <div class="options">
+                        <button id="male" class="active" onclick="checkSex('M');">Male</button>
+                        <button id="female" onclick="checkSex('F');">Female</button>
+                    </div>
+                </div>
+                <div class="text-label">
+                    <label class="title">Valid To</label>
+                    <input class="info" type="text" id="validTo" value="永久" onkeyup="drawWhiteCard()">
+                </div>
+                <div class="text-label">
+                    <label class="title">Type</label>
+                    <input class="info" type="text" id="type" value="弱智" onkeyup="drawWhiteCard()">
+                </div>
+                <div class="text-label">
+                    <label class="title">Serial Number</label>
+                    <input class="info" type="text" id="serialNum" value="00001" onkeyup="drawWhiteCard()">
+                </div>
+
+            </div>
+            <div class="preview-img">
+                <canvas class="whiteCard" id="whiteCard" width="500" height="300">
+                    Your browser does not support the HTML5 canvas tag.</canvas>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="choose-img">Choose Icon</button>
+                <button class="save-img">Save Image</button>
+            </div>
+        </div>
+    </div>
+    <script src="constant.js"></script>
+    <script src="script.js"></script>
+    <script>drawWhiteCard();</script>
+  </body>
+</html>
